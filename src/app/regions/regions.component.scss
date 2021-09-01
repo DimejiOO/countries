@@ -1,0 +1,29 @@
+$shared-margin-left: 100px;
+$shared-margin-bottom: 50px;
+
+.region {
+  margin-top: 25px;
+  margin-left: $shared-margin-left;
+  margin-bottom: $shared-margin-bottom;
+}
+
+.regions {
+  margin-left: 27px;
+}
+
+.country {
+  margin-left: $shared-margin-left;
+}
+
+.countries {
+  margin-left: 25px;
+  margin-bottom: $shared-margin-bottom;
+}
+
+.header {
+  margin-left: $shared-margin-left;
+}
+
+.loadButton {
+  margin-left: $shared-margin-left;
+}

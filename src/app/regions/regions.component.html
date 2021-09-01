@@ -1,0 +1,39 @@
+<div class="panel panel-default country">
+  <h2 data-test="header" class="header">Regions and Countries</h2>
+
+
+  <div class="region">
+    <label for="regionSelection">Region:</label>
+    <select data-test="region-selector" class="regions" id="regionSelection"
+      (change)="loadCountries($event.target.value)">
+      <option value="">Please select a Region</option>
+      <option *ngFor="let item of regionDropdownOptions" [value]="item.code">
+        {{item.label}}
+      </option>
+    </select>
+  </div>
+  <br>
+
+  <div class="country">
+    <label for="countrySelection">Country:</label>
+    <select data-test="country-selector" id="countrySelection" class="countries"
+      (change)="filterList($event.target.value)" [disabled]="disableDropdown()">
+      <option value="">Please select a Country</option>
+      <option *ngFor="let country of selectedCountries" [value]="country.name">
+        {{country.name}}
+      </option>
+    </select>
+  </div>
+  <br>
+
+  <button data-test="country-details-load-button" *ngIf="showLoadCountryDetailsButton" class="loadButton"
+    (click)="loadCountry()">
+    Show Country Details for {{selectedCountryDetails.name}}
+  </button>
+  <br>
+
+  <app-country-details data-test="country-details-selector" *ngIf="showCountryTable"
+    [selectedCountry]="selectedCountryDetails">
+  </app-country-details>
+
+</div>
