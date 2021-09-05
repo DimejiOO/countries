@@ -16,10 +16,11 @@ Once a country gets selected, a user is provided with a button which when clicke
 - Population
 - Currencies
 - Flag
+
 ## Local run instructions
 
-- npm install
-- npm run start
+- npm install or npm i - (To install application dependencies)
+- npm run start - (To start and open up the application at the default 4200 port)
 
 ## Running unit tests
 
